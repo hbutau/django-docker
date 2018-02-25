@@ -1,4 +1,5 @@
 FROM hamub/django:v2
+MAINTAINER Humphrey Butau <hbutau35@gmail.com>
 # Let us copy our requirements file so that we can install our python dependencies.
 ADD requirements.txt /requirements.txt
 
