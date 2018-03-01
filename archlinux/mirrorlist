@@ -1,0 +1,11 @@
+##
+## Arch Linux repository mirrorlist
+## Generated on 2018-02-28
+##
+
+## South Africa
+Server = http://za.mirror.archlinux-br.org/$repo/os/$arch
+Server = http://ftp.wa.co.za/pub/archlinux/$repo/os/$arch
+Server = http://mirror.is.co.za/mirror/archlinux.org/$repo/os/$arch
+Server = http://mirror.wbs.co.za/archlinux/$repo/os/$arch
+
