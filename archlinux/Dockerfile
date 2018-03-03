@@ -8,8 +8,8 @@ RUN set -ex \
     && pacman -Sy --noconfirm \
     gcc \
     python \
-    python-pip \
-    python-psycopg2
+    python-pip 
+    # python-psycopg2
 # Let us copy our requirements file so that we can install our python dependencies.
 ADD requirements.txt /requirements.txt
 RUN pip install -U pip \
@@ -23,5 +23,5 @@ WORKDIR /home/django/
 ADD . /home/django
 EXPOSE 8000
 # Run migrations, collectstatic, start uwsgi .... e.t.c
-CMD ["/home/django/run-prod.sh"]
+CMD ["uwgi --http :8000 --wsgi myproj.wsgi"]
 
